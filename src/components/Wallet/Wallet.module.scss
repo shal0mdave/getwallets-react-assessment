@@ -1,0 +1,99 @@
+@import '../../sass/variables';
+
+.WalletSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5em 3em;
+    border-radius: 10px;
+
+    .Heading{
+        font-family: $primary-font-family;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $secondary-blue;
+        margin-bottom: 2.2em;
+    }
+
+    .Wallet{
+        background-color: #f8f8f9;
+        border: 1px solid rgba(46,41,78,.03);
+        border-radius: 20px;
+
+        h1{
+            font-family: $primary-font-family;
+            font-weight: 600;
+            font-size: 1.28rem;
+            color: $secondary-blue;
+            margin-bottom: 1.2em;
+
+            small{
+                font-family: $primary-font-family;
+                font-weight: normal;
+                font-size: 0.8rem;
+                background-color: $secondary-blue;;
+                color: #fff;
+                padding: 5px 15px;
+                border-radius: 6px;
+                bottom: 4px;
+                position: relative;
+                display: inline-block;
+
+                @media screen and (max-width: $break-width){
+                    margin-top: 0.9em;
+                    width: auto;
+                }
+            }
+        }
+
+        .WalletInner{
+            display: block;
+            padding: 2em 4em;
+
+            @media screen and (max-width: $break-width){
+                padding: 1em;
+            }
+
+            h1{
+                font-family: $primary-font-family;
+                font-size: 1.46em;
+                font-weight: 700;
+                color: $secondary-blue;
+            }
+            h3{
+                font-family: $primary-font-family;
+                font-size: 0.9em;
+                font-weight: 600;
+            }
+            .WalletBalanceGrid{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2em;
+                margin-top: 1em;
+                margin-bottom: 1em;
+
+                @media screen and (max-width: $break-width){
+                    display: block;
+                    margin-top: unset;
+                    margin-bottom: unset;
+                }
+
+                .WalletBalance{
+                    background-color: #fff;
+                    border: 1px solid rgba(46,41,78,.03);
+                    padding: 1.2em;
+                    display: grid;
+                    align-items: stretch;
+                    border-radius: 20px;
+
+                    @media screen and (max-width: $break-width){
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

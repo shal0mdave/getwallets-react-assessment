@@ -1,0 +1,79 @@
+@import '../../sass/variables';
+
+.TransactionsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5em 3em;
+    border-radius: 10px;
+
+    .Heading{
+        font-family: $primary-font-family;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 2.2em;
+    }
+
+    .Transactions{
+        background-color: #f8f8f9;
+        border: 1px solid rgba(46,41,78,.03);
+        border-radius: 20px;
+
+        .TransactionsInner{
+            display: block;
+            padding: 2em 4em;
+
+            @media screen and (max-width: $break-width){
+                padding: 1em;
+            }
+
+            h1{
+                font-family: $primary-font-family;
+                font-weight: 600;
+                font-size: 1.28rem;
+                color: $secondary-blue;
+                margin-bottom: 1.2em;
+            }
+
+            table{
+                font-family: $primary-font-family;
+                font-size: 0.9em;
+                font-weight: 600;
+                background-color: #fff;
+                border-color: #fff;
+                border-radius: 14px;
+
+                .id{
+                    width: 10%;
+                }
+
+                tr{
+                    th, td{
+                        padding: 20px;
+                    }
+
+                    td{
+                        color: #87868b;
+
+                        &.Empty{
+                            color: $secondary-blue;
+                            text-align: center;
+                            
+                            svg{
+                                font-size: 6em;
+                                margin: 0.3em;
+                            }
+                            p{
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

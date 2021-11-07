@@ -1,0 +1,108 @@
+@import '../../../sass/variables';
+
+.OptionsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    .OptionsGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: $break-width){
+            grid-gap: 1.5em;
+            height: auto;
+        }
+
+        .OptionsOption{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin-bottom: 2em;
+            cursor: pointer;
+            color: $secondary-blue;
+
+            @media screen and (max-width: $break-width){
+                height: auto;
+            }
+
+            .Card{
+                // background-color: #080e2f;
+                background-color: #f8f8f9;
+                border: 1px solid rgba(46,41,78,.03);
+                padding: 1em;
+                display: grid;
+                align-items: stretch;
+                border-radius: 20px;
+                transition: .2s cubic-bezier(.33,1,.68,1);
+                min-height: 300px;
+
+                &:hover{
+                    box-shadow: 0 35px 25px -25px rgba(0, 0, 0, 0.1);
+                    -webkit-transform: scale(1.05) translateY(-10px);
+                    transform: scale(1.05) translateY(-10px);
+
+                    .CardDetails{
+                        box-shadow: 0 35px 25px -25px rgba(0, 0, 0, 0.1);
+                        -webkit-transform: scale(1.02) translateY(-3px);
+                        transform: scale(1.02) translateY(-3px);
+                    }
+                } 
+                
+                @media screen and (max-width: $break-width){
+                    min-height: auto;
+                }    
+            }
+
+            .CardIcon{
+                font-size: 9em;
+                text-align: center;
+                margin-bottom: 0.2em;
+
+                @media screen and (max-width: $break-width){
+                    margin-bottom: unset;
+                    font-size: 3em;
+                }
+            }
+
+            .CardDetails{
+                color: #2e294e;
+                z-index: 1;
+                padding: 20px 36px;
+                background-color: #fff;
+                border-radius: 15px;
+
+                @media screen and (max-width: $break-width){
+                    display: none;
+                }
+
+                h3{
+                    font-family: $primary-font-family;
+                    font-weight: 600;
+                    font-size: 1.28rem;
+                }
+                p{
+                    font-family: $primary-font-family;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

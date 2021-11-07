@@ -1,0 +1,80 @@
+@import '../../sass/variables';
+
+.FundSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5em 3em;
+    border-radius: 10px;
+
+    .Heading{
+        font-family: $primary-font-family;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 2.2em;
+    }
+
+    .FundForm{
+        background-color: #f8f8f9;
+        border: 1px solid rgba(46,41,78,.03);
+        border-radius: 20px;
+
+        .FundFormInner{
+            display: block;
+            padding: 2em 4em;
+
+            @media screen and (max-width: $break-width){
+                padding: 1em;
+            }
+            h1{
+                font-family: $primary-font-family;
+                font-weight: 600;
+                font-size: 1.28rem;
+                color: $secondary-blue;
+                margin-bottom: 1.2em;
+            }
+            label{
+                font-size: 0.89rem;
+                font-family: $primary-font-family;
+                font-weight: 500;
+                color: $secondary-blue;
+            }
+            .ErrorMessage{
+                color: $primary-red;
+                font-weight: 600;
+                font-size: 0.8em;
+            }
+            input, select{
+                padding: 0 1.5em;
+                border-color: #eae9ec;
+                font-size: 0.89rem;
+                font-family: $primary-font-family;
+                font-weight: 500;
+                min-height: 54px;
+
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+                
+                &::-webkit-input-placeholder,
+                &::-moz-placeholder,
+                &::placeholder{
+                    color: #eae9ec!important;
+                }
+            }
+            button{
+                background-color: $primary-blue;
+                width: 100%;
+                font-size: 0.89rem;
+                font-family: $primary-font-family;
+                font-weight: 500;
+                min-height: 53px;
+            }
+        }
+    }
+}
