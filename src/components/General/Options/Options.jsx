@@ -43,7 +43,7 @@ const Options = () => {
                                 <h1 className={Styles.CardIcon}><GiDisc /></h1>
                                 <div className={Styles.CardDetails}>
                                     <h3>Transactions</h3>
-                                    <p>View/print invoices</p>
+                                    <p>View transactions</p>
                                 </div>
                             </div>
                         </div>
