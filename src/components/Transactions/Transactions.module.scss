@@ -10,6 +10,10 @@
     padding: 5em 3em;
     border-radius: 10px;
 
+    @media screen and (max-width: $break-width){
+        padding: 3em 0.5em;
+    }
+
     .Heading{
         font-family: $primary-font-family;
         font-size: 1.2em;

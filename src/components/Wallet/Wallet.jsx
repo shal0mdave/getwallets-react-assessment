@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 import { Layout, Options } from '../General'
 import { getWallet } from '../../redux/slices/wallet'
@@ -10,6 +12,14 @@ import Styles from './Wallet.module.scss'
 const Wallet = () => {
     const wallet = useSelector(getWallet)
     const transactions = useSelector(getTransactionsLocal)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        // redirect if no wallet
+        if(wallet.length === 0) {
+            navigate('/')
+        }
+    }, [wallet, navigate])
 
     const totalUSD = returnTotal(transactions, '$');
     const totalNGN = returnTotal(transactions, '₦');
