@@ -30,11 +30,11 @@ https://docs.getwallets.co/reference/post_wallets
 First, run the development server:
 
 ```bash
-npm i
-npm start
+    npm i
+    npm start
 # or
-yarn install
-yarn start
+    yarn install
+    yarn start
 ```
 
 ## Environment Variables
