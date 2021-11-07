@@ -8,7 +8,7 @@
     height: 100vh;
 
     @media screen and (max-width: $break-width){
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
     }
 
@@ -22,7 +22,7 @@
         position: relative;
 
         @media screen and (max-width: $break-width){
-            padding: 5em;
+            padding: 5em 2em;
         }
 
         svg{
@@ -62,7 +62,7 @@
 
         @media screen and (max-width: $break-width){
             width: 100%;
-            padding: 2em 5em;
+            padding: 4em 2em;
         }
         
         .ActionGreeting{
@@ -109,7 +109,7 @@
                     &::-webkit-input-placeholder,
                     &::-moz-placeholder,
                     &::placeholder{
-                        color: #eae9ec!important;
+                        color: #aeaeaf!important;
                     }
                 }
     
