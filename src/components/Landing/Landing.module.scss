@@ -22,7 +22,10 @@
         position: relative;
 
         @media screen and (max-width: $break-width){
+            width: 100%;
+            height: auto;
             padding: 5em 1em;
+            display: block;
         }
 
         svg{
@@ -62,8 +65,9 @@
 
         @media screen and (max-width: $break-width){
             width: 100%;
-            height: 100vh;
-            padding: 4em 1em;
+            height: auto;
+            padding: 5em 1em;
+            display: block;
         }
         
         .ActionGreeting{
