@@ -26,7 +26,7 @@ const TransactionsTable  = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {transactions.map(t => (
+                            {transactions.slice(0).reverse().map(t => (
                                 <tr key={t.meta_data.transaction_id}>
                                     <td></td>
                                     <td title={t.meta_data.transaction_id}>{t.meta_data.transaction_id.substring(0, 20) + '...'}</td>

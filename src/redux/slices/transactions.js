@@ -25,13 +25,19 @@ export const getTransactionsLocal = (state) => state.transactions
 const transactionsSlice = createSlice({
     name: 'transactions',
     initialState,
-    reducers: {},
+    reducers: {
+        deleteAllTransactions: (state) => {
+            state.splice(0, state.length);
+        }
+    },
     extraReducers: {
         [fund.fulfilled]: (state, action) => {
             state.push(action.payload);
         }
     }
 });
+
+export const { deleteAllTransactions } = transactionsSlice.actions
 
 export default transactionsSlice.reducer;
 

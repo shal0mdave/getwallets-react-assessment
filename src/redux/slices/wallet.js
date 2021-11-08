@@ -17,13 +17,19 @@ export const getWallet = (state) => state.wallet
 const walletSlice = createSlice({
     name: 'wallet',
     initialState,
-    reducers: {},
+    reducers: {
+        deleteAllWallets: (state) => {
+            state.splice(0, state.length);
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(createWallet.fulfilled, (state, action) => {
             state.push(action.payload);
         })
     }
 });
+
+export const { deleteAllWallets } = walletSlice.actions
 
 
 export default walletSlice.reducer;

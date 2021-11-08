@@ -82,4 +82,32 @@
             }
         }
     }
+
+
+    .InvoiceContainer{
+        background-color: #f8f8f9;
+        border: 1px solid rgba(46,41,78,.03);
+        border-radius: 20px;
+
+        @media screen and (max-width: $break-width){
+            padding: 0em;
+            margin-top: 1em;
+        }
+
+        .CardTitle{
+            margin-top: 20px;
+            font-size: 34px;
+            font-weight: 700;
+        }
+        .CardAmount{
+            font-size: 1.28em;
+            font-weight: 800;
+            color: #847d84ee;
+        }
+        .CardText{
+            font-size: 1.06em;
+            line-height: 1.8;
+        }
+    }
+    
 }

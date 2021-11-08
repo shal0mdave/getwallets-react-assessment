@@ -1,29 +1,36 @@
-
-import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { useNavigate, Link } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
 import { Container } from 'react-bootstrap'
 import { GiWallet } from 'react-icons/gi'
 import { GiDisc, GiTwoCoins } from 'react-icons/gi'
+import { IoLogInSharp } from 'react-icons/io5'
 
-import { getWallet } from '../../../redux/slices/wallet'
+import { deleteState } from '../../../hooks/useLocalStorage' 
+import { deleteAllWallets } from '../../../redux/slices/wallet'
+import { deleteAllTransactions } from '../../../redux/slices/transactions'
 import Styles from './Options.module.scss'
 
-const Options = () => {
-    const navigate = useNavigate()
-    const wallet = useSelector(getWallet)
 
-    useEffect(() => {
-        // redirect if no wallet
-        if(wallet.length === 0) {
-            navigate('/')
-        }
-    }, [wallet, navigate])
+
+const Options = () => {
+    
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    
+    const logoutHandler = () => {
+        dispatch(deleteAllWallets())
+        dispatch(deleteAllTransactions())
+        deleteState()
+        navigate('/')
+    }
 
     return (
         <section className={Styles.OptionsSection}>
             <Container>
+                <button className={Styles.AuthButton} onClick={logoutHandler}>
+                    Logout <IoLogInSharp />
+                </button>
+
                 <div className={Styles.OptionsGrid}>
                     <Link to="/wallet">
                         <div className={Styles.OptionsOption}>

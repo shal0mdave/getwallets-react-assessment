@@ -9,6 +9,21 @@
     height: 100%;
     border-radius: 10px;
 
+    .AuthButton{
+        border: none;
+        background-color: #0479fe;
+        color: #fff;
+        min-height: 35px;
+        min-width: 35px;
+        text-align: center;
+        border-radius: 2px;
+        line-height: 0;
+        font-weight: 500;
+        font-size: 1em;
+        position: relative;
+        margin-bottom: 3em;
+    }
+
     .OptionsGrid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -75,6 +90,7 @@
                 font-size: 9em;
                 text-align: center;
                 margin-bottom: 0.2em;
+                color: $primary-blue;
 
                 @media screen and (max-width: $break-width){
                     margin-bottom: unset;
