@@ -44,7 +44,6 @@ const FundForm = () => {
                 toast.success('Wallet successfully funded')
                 setTransaction(newTransaction)
                 setShowInvoice(true)
-                setAmount('')
             })
             .catch(e => {
                 // console.log(e)
